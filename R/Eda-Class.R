@@ -4,7 +4,6 @@
 #' of a database table which is initialised from a credentials.yml at the root
 #' of the project.
 #'
-#' @slot data `data.frame`. The data loaded from the table (see [loaddb()]).
 #' @slot base `list`. A list with names `database`, `host`, `port`, `user`,
 #' `password` that holds DBI connexion information.
 #' @slot root_path `character`. The path to root, `credentials.yml` is searched
@@ -22,7 +21,7 @@
 #' password: mypassword
 #' ```
 #' Do not commit this file to git.
-#' @author Cedric Briand \email{cedric.briand@@eaux_et_vilaine.bzh}
+#' @author Cedric Briand \email{cedric.briand@@eaux-et-vilaine.bzh}
 #' @seealso [loaddb()]
 #'
 #' @examples
@@ -32,8 +31,7 @@
 #' obj
 #' # Reading a credentials file
 #' if (requireNamespace("yaml", quietly = TRUE)) {
-#' dir <- tempfile("eda")
-#' dir.create(dir)
+#' dir <-  withr::local_tempdir()
 #'  base <- list(
 #'    database = "my_database",
 #'    host     = "localhost",
@@ -41,10 +39,9 @@
 #'    user     = "postgres",
 #'    password = "mon_petit_secret_bien_garde"
 #'    )
-#'  yaml::write_yaml(base, "credentials.yml")
-#'  obj <- new("Eda", root_path = "dir")
+#'  yaml::write_yaml(base, file.path(dir,"credentials.yml"))
+#'  obj <- new("Eda", root_path = dir)
 #'  print(obj) # shows the content of the object
-#'  # An example which will search for credentials.yml at the root of the project
 #'  }
 #' @aliases Eda-class
 #' @export
@@ -65,8 +62,11 @@ setClass(
     if (length(missing))
       msg <- c(msg, paste("@base is missing element(s):",
                           paste(missing, collapse = ", ")))
-    if ("port" %in% names(object@base) && class(object@base$port) != "numeric")
-      msg <- c(msg, "the port should be an integer or a numeric")
+    if ("port" %in% names(object@base)) {
+      port <- object@base$port
+      if (!is.numeric(port) || length(port) != 1L || is.na(port))
+        msg <- c(msg, "the port should be a single integer or numeric value")
+    }
     if (length(object@root_path) > 1L)
       msg <- c(msg, "@root_path must have length 0 or 1")
 
@@ -125,6 +125,7 @@ setMethod(
 
 #' @rdname Eda-class
 #' @aliases show,Eda-method
+#' @param object An object of class eda
 #' @export
 setMethod("show", "Eda", function(object) {
   cat("<Eda>\n")

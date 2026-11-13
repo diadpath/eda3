@@ -3,3 +3,9 @@
 ^\.github$
 ^README\.Rmd$
 ^credentials\.yml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^credentials.yml$
+^LICENSE$
+^LICENSE\.md$

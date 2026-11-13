@@ -16,4 +16,5 @@ importFrom(utils,
   setTxtProgressBar,
   txtProgressBar
 )
+importFrom(withr,local_tempdir)
 importFrom(yaml,read_yaml)

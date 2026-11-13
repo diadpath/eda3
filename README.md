@@ -5,6 +5,9 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/diadpath/eda/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/diadpath/eda/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/diadpath/eda/graph/badge.svg)](https://app.codecov.io/gh/diadpath/eda)
 <!-- badges: end -->
 
 The goal of eda3 is to …
@@ -23,11 +26,6 @@ pak::pak("diadpath/eda")
 
 This is a basic example which shows you how to solve a common problem:
 
-``` r
-library(eda3)
-## basic example code
-```
-
 What is special about using `README.Rmd` instead of just `README.md`?
 You can include R chunks like so:
 
@@ -39,8 +37,6 @@ You’ll still need to render `README.Rmd` regularly, to keep `README.md`
 up-to-date. `devtools::build_readme()` is handy for this.
 
 You can also embed plots, for example:
-
-<img src="man/figures/README-another example-1.png" alt="" width="100%" />
 
 In that case, don’t forget to commit and push the resulting figure
 files, so they display on GitHub and CRAN.

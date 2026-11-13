@@ -12,7 +12,7 @@ test_that("Eda is created from credentials.yml", {
   dir <- withr::local_tempdir()
   yaml::write_yaml(good, file.path(dir, "credentials.yml"))
   obj <- new("Eda", root_path = dir)
-  expect_equal(obj@base$database, "d")
+  expect_equal(obj@base$database, "superchouettedb")
 })
 
 test_that("missing credentials file gives a clear error", {
@@ -23,7 +23,7 @@ test_that("missing credentials file gives a clear error", {
 test_that("validity catches bad base", {
   expect_error(new("Eda", base = good[-1]), "database")
   bad <- good; bad$port <- "x" # A character
-  expect_error(new("Eda", base = bad, root_path = tempdir()), "port")
+  expect_error(new("Eda", base = bad), "port")
 })
 
 test_that("show hides the password", {

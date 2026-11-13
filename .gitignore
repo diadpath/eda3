@@ -52,3 +52,5 @@ rsconnect/
 
 # yml at the root
 credentials.yml
+docs
+.DS_Store

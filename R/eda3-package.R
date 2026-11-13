@@ -5,6 +5,7 @@
 #' @importFrom knitr kable
 #' @importFrom here here
 #' @importFrom yaml read_yaml
+#' @importFrom withr local_tempdir
 "_PACKAGE"
 
 ## usethis namespace: start

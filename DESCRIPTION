@@ -5,16 +5,19 @@ Authors@R:
     person("Cedric", "Briand", , "cedric.briand@eaux-et-vilaine.bzh", role = c("aut", "cre"))
 Description: This package loads from electrofishing, river, dam and release database 
     and provide various functions to build the data for the models. Class are S4 class.
-License: GPL3
+License: GPL (>= 3)
 Config/roxygen2/version: 8.1.1
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Imports: 
-    cli,
     glue,
     lifecycle,
     methods,
     rlang,
+    DBI, 
+    here,
+    knitr,
+    yaml,
     withr
 Suggests: 
     testthat (>= 3.0.0)

@@ -21,6 +21,8 @@ from \code{credentials.yml} in \code{root_path}.#'}
 \item{root_path}{\code{character(1)}. Project root. Defaults to \code{\link[here:here]{here::here()}}.}
 
 \item{...}{Passed to the next \code{initialize} method.}
+
+\item{object}{An object of class eda}
 }
 \description{
 Mother class for EDA model objects. It stores the connection information
@@ -30,8 +32,6 @@ of the project.
 \section{Slots}{
 
 \describe{
-\item{\code{data}}{\code{data.frame}. The data loaded from the table (see \code{\link[=loaddb]{loaddb()}}).}
-
 \item{\code{base}}{\code{list}. A list with names \code{database}, \code{host}, \code{port}, \code{user},
 \code{password} that holds DBI connexion information.}
 
@@ -63,8 +63,7 @@ obj <- new("Eda", list("database" = "my_database", "host" = "localhost",
 obj
 # Reading a credentials file
 if (requireNamespace("yaml", quietly = TRUE)) {
-dir <- tempfile("eda")
-dir.create(dir)
+dir <-  withr::local_tempdir()
  base <- list(
    database = "my_database",
    host     = "localhost",
@@ -72,15 +71,14 @@ dir.create(dir)
    user     = "postgres",
    password = "mon_petit_secret_bien_garde"
    )
- yaml::write_yaml(base, "credentials.yml")
- obj <- new("Eda", root_path = "dir")
+ yaml::write_yaml(base, file.path(dir,"credentials.yml"))
+ obj <- new("Eda", root_path = dir)
  print(obj) # shows the content of the object
- # An example which will search for credentials.yml at the root of the project
  }
 }
 \seealso{
 \code{\link[=loaddb]{loaddb()}}
 }
 \author{
-Cedric Briand \email{cedric.briand@eaux_et_vilaine.bzh}
+Cedric Briand \email{cedric.briand@eaux-et-vilaine.bzh}
 }
