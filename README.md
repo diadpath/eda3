@@ -10,7 +10,10 @@
 coverage](https://codecov.io/gh/diadpath/eda/graph/badge.svg)](https://app.codecov.io/gh/diadpath/eda)
 <!-- badges: end -->
 
-The goal of eda3 is to …
+This package corresponds to eda3.0 - multispecific EDA model adapted to
+multiple river networks
+
+This package is under development
 
 ## Installation
 
@@ -30,7 +33,7 @@ What is special about using `README.Rmd` instead of just `README.md`?
 You can include R chunks like so:
 
 ``` r
-#TODO
+# TODO
 ```
 
 You’ll still need to render `README.Rmd` regularly, to keep `README.md`

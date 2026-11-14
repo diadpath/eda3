@@ -54,3 +54,5 @@ rsconnect/
 credentials.yml
 docs
 .DS_Store
+
+README.html
