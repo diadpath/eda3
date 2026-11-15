@@ -1,0 +1,149 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-1a1dacb0310-31317bdf5817c29c": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "diaspara_server_cedric",
+			"save-password": true,
+			"configuration": {
+				"host": "10.1.128.16",
+				"port": "5432",
+				"database": "diaspara",
+				"url": "jdbc:postgresql://10.1.128.16:5432/diaspara",
+				"configurationType": "MANUAL",
+				"home": "postgresql-x64-14",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-chosen-role@": "",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false",
+					"replace-legacy-timezone": "false"
+				},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-1a1dacb33ef-18b4a29c3072be69": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "eda2.0",
+			"save-password": true,
+			"configuration": {
+				"host": "db.mercure.eaux-et-vilaine.bzh",
+				"port": "5432",
+				"database": "eda2.0",
+				"url": "jdbc:postgresql://db.mercure.eaux-et-vilaine.bzh:5432/eda2.0",
+				"configurationType": "MANUAL",
+				"home": "postgresql-x64-14",
+				"type": "prod",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-chosen-role@": ""
+				},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-1a1dacb3424-38798d85b9d28ddb": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "eda2.3",
+			"save-password": true,
+			"configuration": {
+				"host": "10.1.128.16",
+				"port": "5432",
+				"database": "eda2.3",
+				"url": "jdbc:postgresql://10.1.128.16:5432/eda2.3",
+				"configurationType": "MANUAL",
+				"home": "postgresql-x64-14",
+				"type": "prod",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-chosen-role@": ""
+				},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-1a1dacb4f15-5c9aad40142e841a": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres mercure all 10.1.128.16",
+			"save-password": true,
+			"configuration": {
+				"host": "10.1.128.16",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://10.1.128.16:5432/postgres",
+				"configurationType": "MANUAL",
+				"home": "postgresql-x64-16",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "true",
+					"@dbeaver-chosen-role@": ""
+				},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-1a1dacb4f4f-10969286871b8c88": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres_localhost_all",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://localhost:5432/postgres",
+				"configurationType": "MANUAL",
+				"home": "postgresql-x64-16",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "true",
+					"@dbeaver-chosen-role@": ""
+				},
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		},
+		"prod": {
+			"name": "Production",
+			"color": "org.jkiss.dbeaver.color.connectionType.prod.background",
+			"description": "Production database",
+			"auto-commit": false,
+			"confirm-execute": false,
+			"confirm-data-change": true,
+			"smart-commit": false,
+			"smart-commit-recover": false,
+			"auto-close-transactions": true,
+			"close-transactions-period": 600,
+			"auto-close-connections": true,
+			"close-connections-period": 3600
+		}
+	}
+}

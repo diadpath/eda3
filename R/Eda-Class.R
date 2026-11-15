@@ -59,7 +59,7 @@ setClass(
     msg <- character()
     required <- c("database", "host", "port", "user", "password")
     missing <- setdiff(required, names(object@base))
-    if (length(missing))
+    if (length(missing) >0)
       msg <- c(msg, paste("@base is missing element(s):",
                           paste(missing, collapse = ", ")))
     if ("port" %in% names(object@base)) {
@@ -125,7 +125,7 @@ setMethod(
 
 #' @rdname Eda-class
 #' @aliases show,Eda-method
-#' @param object An object of class eda
+#' @param object An object of class `Eda`
 #' @export
 setMethod("show", "Eda", function(object) {
   cat("<Eda>\n")

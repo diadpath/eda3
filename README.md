@@ -13,7 +13,8 @@ coverage](https://codecov.io/gh/diadpath/eda/graph/badge.svg)](https://app.codec
 This package corresponds to eda3.0 - multispecific EDA model adapted to
 multiple river networks
 
-This package is under development
+THIS PACKAGE IS UNDER DEVELOPMENT =\> ***shifting from eda2.3 to
+eda3.0.***
 
 ## Installation
 
@@ -25,21 +26,14 @@ You can install the development version of eda3 from
 pak::pak("diadpath/eda")
 ```
 
+## Data
+
+This package contains the following data tables
+
+column_mapping: correspondence between sudoang (base eda format - and
+format for national tables), hydroshed and amber_salmon (mostly
+EU-hydro).
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-# TODO
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.

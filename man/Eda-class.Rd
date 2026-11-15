@@ -22,7 +22,7 @@ from \code{credentials.yml} in \code{root_path}.#'}
 
 \item{...}{Passed to the next \code{initialize} method.}
 
-\item{object}{An object of class eda}
+\item{object}{An object of class \code{Eda}}
 }
 \description{
 Mother class for EDA model objects. It stores the connection information

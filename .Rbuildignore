@@ -10,3 +10,5 @@
 ^LICENSE$
 ^LICENSE\.md$
 ^README\.html$
+^dev$
+^data-raw$

@@ -32,7 +32,13 @@ Collate:
     'Hydropower-Class.R'
     'River-Class.R'
     'River-Method.R'
+    'River-utils.R'
     'Salmon-Class.R'
     'SilverEel-Class.R'
+    'create_column_mapping.R'
+    'data-column_mapping.R'
     'eda3-package.R'
     'import-standalone-purrr.R'
+Depends: 
+    R (>= 3.5)
+LazyData: true
